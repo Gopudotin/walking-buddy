@@ -42,13 +42,13 @@ export default function MapDemo() {
         >
           <div className="inline-flex items-center gap-2 bg-card border border-border-custom rounded-full px-4 py-1.5 mb-5">
             <span className="w-2 h-2 rounded-full bg-orange-custom" />
-            <span className="text-xs font-dm text-muted tracking-widest uppercase">Live Map Demo</span>
+            <span className="text-xs font-body text-muted tracking-widest uppercase">Live Map Demo</span>
           </div>
-          <h2 className="font-syne font-extrabold text-4xl md:text-5xl text-cream mb-4">
+          <h2 className="font-display font-extrabold text-4xl md:text-5xl text-cream mb-4">
             See who&apos;s walking<br />
             <span className="text-lime">your route right now</span>
           </h2>
-          <p className="text-muted font-dm text-lg max-w-xl mx-auto">
+          <p className="text-muted font-body text-lg max-w-xl mx-auto">
             Real-time route overlap matching across Kochi — Infopark, CUSAT, Palarivattom and beyond.
           </p>
         </motion.div>
@@ -103,7 +103,7 @@ export default function MapDemo() {
                 initial={{ opacity: 0, scale: 0.7 }}
                 animate={isInView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ delay: 0.4 + i * 0.15, duration: 0.4 }}
-                className="absolute text-xs font-syne font-semibold px-2.5 py-1 rounded-full backdrop-blur-md bg-dark/70 border border-border-custom whitespace-nowrap"
+                className="absolute text-xs font-display font-semibold px-2.5 py-1 rounded-full backdrop-blur-md bg-dark/70 border border-border-custom whitespace-nowrap"
                 style={{ left: lbl.x, top: lbl.y, color: lbl.color }}
               >
                 {lbl.label}
@@ -151,18 +151,18 @@ export default function MapDemo() {
               >
                 <div className="w-10 h-10 rounded-xl bg-lime/10 border border-lime/20 flex items-center justify-center text-xl flex-shrink-0">🤝</div>
                 <div>
-                  <div className="font-syne font-bold text-sm text-cream">Match found!</div>
-                  <div className="font-dm text-xs text-muted mt-0.5">Arjun K. shares 1.8 km of your route to Infopark</div>
+                  <div className="font-display font-bold text-sm text-cream">Match found!</div>
+                  <div className="font-body text-xs text-muted mt-0.5">Arjun K. shares 1.8 km of your route to Infopark</div>
                 </div>
-                <button className="ml-auto flex-shrink-0 bg-lime text-dark text-xs font-syne font-bold px-3 py-1.5 rounded-full">Join</button>
+                <button className="ml-auto flex-shrink-0 bg-lime text-dark text-xs font-display font-bold px-3 py-1.5 rounded-full">Join</button>
               </motion.div>
             )}
-            <div className="absolute top-4 right-4 bg-lime text-dark text-xs font-syne font-bold px-3 py-1.5 rounded-xl">2.4 km</div>
+            <div className="absolute top-4 right-4 bg-lime text-dark text-xs font-display font-bold px-3 py-1.5 rounded-xl">2.4 km</div>
           </motion.div>
 
           {/* Walker cards */}
           <div className="lg:col-span-2 space-y-4">
-            <div className="font-syne font-bold text-xs text-muted uppercase tracking-widest mb-2">Walkers on your route</div>
+            <div className="font-display font-bold text-xs text-muted uppercase tracking-widest mb-2">Walkers on your route</div>
             {walkers.map((w, i) => (
               <motion.div
                 key={i}
@@ -174,11 +174,11 @@ export default function MapDemo() {
               >
                 <div className="w-10 h-10 rounded-xl bg-mid flex items-center justify-center text-xl flex-shrink-0">{w.avatar}</div>
                 <div className="flex-1 min-w-0">
-                  <div className="font-syne font-bold text-sm text-cream">{w.name}</div>
-                  <div className="font-dm text-xs text-muted truncate mt-0.5">{w.route}</div>
-                  <div className="font-dm text-xs text-lime mt-1">{w.overlap} overlap · ⭐ {w.rating}</div>
+                  <div className="font-display font-bold text-sm text-cream">{w.name}</div>
+                  <div className="font-body text-xs text-muted truncate mt-0.5">{w.route}</div>
+                  <div className="font-body text-xs text-lime mt-1">{w.overlap} overlap · ⭐ {w.rating}</div>
                 </div>
-                <button className="flex-shrink-0 bg-lime text-dark text-xs font-syne font-bold px-3 py-1.5 rounded-full hover:bg-lime/90 active:scale-95 transition-all">Join</button>
+                <button className="flex-shrink-0 bg-lime text-dark text-xs font-display font-bold px-3 py-1.5 rounded-full hover:bg-lime/90 active:scale-95 transition-all">Join</button>
               </motion.div>
             ))}
           </div>

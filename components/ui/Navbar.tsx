@@ -1,12 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 import Link from "next/link";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
-  const { scrollY } = useScroll();
+  const { scrollY, scrollYProgress } = useScroll();
 
   useEffect(() => {
     const unsub = scrollY.on("change", (v) => setScrolled(v > 40));
@@ -14,7 +14,8 @@ export default function Navbar() {
   }, [scrollY]);
 
   return (
-    <motion.header
+    <>
+      <motion.header
       initial={{ y: -80, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
@@ -28,9 +29,9 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group">
           <div className="w-8 h-8 rounded-xl bg-lime flex items-center justify-center">
-            <span className="text-dark text-sm font-syne font-800 leading-none">W</span>
+            <span className="text-dark text-sm font-display font-800 leading-none">W</span>
           </div>
-          <span className="font-syne font-bold text-lg text-cream">
+          <span className="font-display font-bold text-lg text-cream">
             Walk<span className="text-lime">Mate</span>
           </span>
         </Link>
@@ -41,7 +42,7 @@ export default function Navbar() {
             <a
               key={item}
               href={`#${item.toLowerCase().replace(/ /g, "-")}`}
-              className="text-sm text-muted hover:text-cream transition-colors duration-200 font-dm"
+              className="text-sm text-muted hover:text-cream transition-colors duration-200 font-body"
             >
               {item}
             </a>
@@ -51,7 +52,7 @@ export default function Navbar() {
         {/* CTA */}
         <a
           href="#download"
-          className="flex items-center gap-2 bg-lime text-dark px-4 py-2 rounded-full text-sm font-syne font-bold hover:bg-lime/90 active:scale-95 transition-all duration-150"
+          className="flex items-center gap-2 bg-lime text-dark px-4 py-2 rounded-full text-sm font-display font-bold hover:bg-lime/90 active:scale-95 transition-all duration-150"
         >
           <span>Get Early Access</span>
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
@@ -60,5 +61,12 @@ export default function Navbar() {
         </a>
       </div>
     </motion.header>
+
+    {/* Thin lime progress bar at the very top (under the nav conceptually, but fixed) */}
+    <motion.div
+        style={{ scaleX: scrollYProgress }}
+        className="fixed top-[72px] left-0 right-0 h-[2px] bg-lime origin-left z-50"
+      />
+    </>
   );
 }

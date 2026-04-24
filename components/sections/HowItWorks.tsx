@@ -57,13 +57,13 @@ export default function HowItWorks() {
         >
           <div className="inline-flex items-center gap-2 bg-card border border-border-custom rounded-full px-4 py-1.5 mb-5">
             <span className="w-2 h-2 rounded-full bg-teal-custom" />
-            <span className="text-xs font-dm text-muted tracking-widest uppercase">How It Works</span>
+            <span className="text-xs font-body text-muted tracking-widest uppercase">How It Works</span>
           </div>
-          <h2 className="font-syne font-extrabold text-4xl md:text-5xl text-cream mb-4">
+          <h2 className="font-display font-extrabold text-4xl md:text-5xl text-cream mb-4">
             Three steps to your<br />
             <span className="text-lime">perfect walk buddy</span>
           </h2>
-          <p className="text-muted font-dm text-lg max-w-xl mx-auto">
+          <p className="text-muted font-body text-lg max-w-xl mx-auto">
             No complicated sign-ups. Just open, post, and walk.
           </p>
         </motion.div>
@@ -89,7 +89,7 @@ export default function HowItWorks() {
             >
               {/* Giant faded step number behind card content */}
               <div
-                className="absolute -top-4 -right-2 font-syne font-extrabold text-[7rem] leading-none select-none pointer-events-none opacity-[0.04]"
+                className="absolute -top-4 -right-2 font-display font-extrabold text-[7rem] leading-none select-none pointer-events-none opacity-[0.04]"
                 style={{ color: step.accent }}
               >
                 {step.number}
@@ -106,7 +106,7 @@ export default function HowItWorks() {
 
               {/* Step number badge */}
               <div
-                className="inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-syne font-bold mb-4 border"
+                className="inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-display font-bold mb-4 border"
                 style={{
                   background: `${step.accent}14`,
                   borderColor: `${step.accent}40`,
@@ -116,8 +116,8 @@ export default function HowItWorks() {
                 Step {step.number}
               </div>
 
-              <h3 className="font-syne font-bold text-xl text-cream mb-3">{step.title}</h3>
-              <p className="font-dm text-muted text-sm leading-relaxed">{step.description}</p>
+              <h3 className="font-display font-bold text-xl text-cream mb-3">{step.title}</h3>
+              <p className="font-body text-muted text-sm leading-relaxed">{step.description}</p>
 
               {/* Connector arrow (not last) */}
               {i < steps.length - 1 && (

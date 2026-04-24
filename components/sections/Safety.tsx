@@ -58,13 +58,13 @@ export default function Safety() {
             >
               <div className="inline-flex items-center gap-2 bg-card border border-border-custom rounded-full px-4 py-1.5 mb-5">
                 <span className="w-2 h-2 rounded-full bg-orange-custom" />
-                <span className="text-xs font-dm text-muted tracking-widest uppercase">Safety First</span>
+                <span className="text-xs font-body text-muted tracking-widest uppercase">Safety First</span>
               </div>
-              <h2 className="font-syne font-extrabold text-4xl md:text-5xl text-cream mb-4 leading-tight">
+              <h2 className="font-display font-extrabold text-4xl md:text-5xl text-cream mb-4 leading-tight">
                 Walk safe,<br />
                 <span className="text-lime">always together</span>
               </h2>
-              <p className="text-muted font-dm text-lg leading-relaxed mb-8">
+              <p className="text-muted font-body text-lg leading-relaxed mb-8">
                 Built from the ground up for the streets of Kochi. Every feature — from verified IDs to SOS alerts — is designed to keep you safe, whether you&apos;re at Palarivattom Junction at 7 AM or Marine Drive at dusk.
               </p>
             </motion.div>
@@ -131,8 +131,8 @@ export default function Safety() {
                   {f.icon}
                 </div>
                 <div>
-                  <h3 className="font-syne font-bold text-base text-cream mb-1">{f.title}</h3>
-                  <p className="font-dm text-sm text-muted leading-relaxed">{f.description}</p>
+                  <h3 className="font-display font-bold text-base text-cream mb-1">{f.title}</h3>
+                  <p className="font-body text-sm text-muted leading-relaxed">{f.description}</p>
                 </div>
               </motion.div>
             ))}

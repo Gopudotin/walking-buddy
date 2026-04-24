@@ -82,3 +82,83 @@ body {
   0%   { offset-distance: 0%; }
   100% { offset-distance: 100%; }
 }
+
+/* ── WALKING ANIMATIONS ── */
+@keyframes leg-left-walk {
+  0%, 100% { transform: rotate(-25deg); transform-origin: top center; }
+  50%       { transform: rotate(25deg);  transform-origin: top center; }
+}
+
+@keyframes leg-right-walk {
+  0%, 100% { transform: rotate(25deg);  transform-origin: top center; }
+  50%       { transform: rotate(-25deg); transform-origin: top center; }
+}
+
+@keyframes arm-left-walk {
+  0%, 100% { transform: rotate(20deg);  transform-origin: top center; }
+  50%       { transform: rotate(-20deg); transform-origin: top center; }
+}
+
+@keyframes arm-right-walk {
+  0%, 100% { transform: rotate(-20deg); transform-origin: top center; }
+  50%       { transform: rotate(20deg);  transform-origin: top center; }
+}
+
+@keyframes body-bob {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-3px); }
+}
+
+@keyframes leg-left-run {
+  0%, 100% { transform: rotate(-45deg); transform-origin: top center; }
+  50%       { transform: rotate(45deg);  transform-origin: top center; }
+}
+
+@keyframes leg-right-run {
+  0%, 100% { transform: rotate(45deg);  transform-origin: top center; }
+  50%       { transform: rotate(-45deg); transform-origin: top center; }
+}
+
+@keyframes arm-left-run {
+  0%, 100% { transform: rotate(40deg);  transform-origin: top center; }
+  50%       { transform: rotate(-40deg); transform-origin: top center; }
+}
+
+@keyframes arm-right-run {
+  0%, 100% { transform: rotate(-40deg); transform-origin: top center; }
+  50%       { transform: rotate(40deg);  transform-origin: top center; }
+}
+
+@keyframes body-bob-run {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-5px); }
+}
+
+.char-A { --duration: 0.7s; }
+.char-B { --duration: 0.65s; }
+.char-C { --duration: 0.72s; }
+.char-D { --duration: 0.35s; }
+
+.walking-fig .leg-left { animation: leg-left-walk var(--duration) infinite ease-in-out; }
+.walking-fig .leg-right { animation: leg-right-walk var(--duration) infinite ease-in-out; }
+.walking-fig .arm-left { animation: arm-left-walk var(--duration) infinite ease-in-out; }
+.walking-fig .arm-right { animation: arm-right-walk var(--duration) infinite ease-in-out; }
+.walking-fig { animation: body-bob var(--duration) infinite ease-in-out; }
+
+.running-fig .leg-left { animation: leg-left-run var(--duration) infinite ease-in-out; }
+.running-fig .leg-right { animation: leg-right-run var(--duration) infinite ease-in-out; }
+.running-fig .arm-left { animation: arm-left-run var(--duration) infinite ease-in-out; }
+.running-fig .arm-right { animation: arm-right-run var(--duration) infinite ease-in-out; }
+.running-fig { animation: body-bob-run var(--duration) infinite ease-in-out; }
+
+.location-dot { animation: dot-pulse 2s infinite ease-in-out; }
+
+@keyframes road-scroll {
+  from { stroke-dashoffset: 0; }
+  to   { stroke-dashoffset: -80; }
+}
+
+.road-dash {
+  stroke-dasharray: 40 40;
+  animation: road-scroll 0.8s linear infinite;
+}

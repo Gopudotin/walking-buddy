@@ -46,13 +46,13 @@ export default function WalkVibes() {
         >
           <div className="inline-flex items-center gap-2 bg-card border border-border-custom rounded-full px-4 py-1.5 mb-5">
             <span className="w-2 h-2 rounded-full bg-lime" />
-            <span className="text-xs font-dm text-muted tracking-widest uppercase">Walk Vibes</span>
+            <span className="text-xs font-body text-muted tracking-widest uppercase">Walk Vibes</span>
           </div>
-          <h2 className="font-syne font-extrabold text-4xl md:text-5xl text-cream mb-4">
+          <h2 className="font-display font-extrabold text-4xl md:text-5xl text-cream mb-4">
             Every walk has<br />
             <span className="text-lime">its own energy</span>
           </h2>
-          <p className="text-muted font-dm text-lg max-w-xl mx-auto">
+          <p className="text-muted font-body text-lg max-w-xl mx-auto">
             Set your vibe before you post. We only match you with people who want the same kind of walk.
           </p>
         </motion.div>
@@ -71,7 +71,7 @@ export default function WalkVibes() {
           transition={{ duration: 0.6, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
           className="text-center mt-12"
         >
-          <p className="text-muted font-dm text-sm">
+          <p className="text-muted font-body text-sm">
             You can change your vibe anytime — even mid-walk. Your walk, your rules.
           </p>
         </motion.div>

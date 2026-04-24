@@ -1,13 +1,12 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 
 export default function DownloadCTA() {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
-  const canvasRef = useRef<HTMLCanvasElement>(null);
 
   const fireConfetti = async () => {
     const confetti = (await import("canvas-confetti")).default;
@@ -45,13 +44,13 @@ export default function DownloadCTA() {
         >
           <div className="inline-flex items-center gap-2 bg-card border border-border-custom rounded-full px-4 py-1.5 mb-5">
             <span className="w-2 h-2 rounded-full bg-lime animate-pulse" />
-            <span className="text-xs font-dm text-muted tracking-widest uppercase">Coming Soon</span>
+            <span className="text-xs font-body text-muted tracking-widest uppercase">Coming Soon</span>
           </div>
-          <h2 className="font-syne font-extrabold text-4xl md:text-6xl text-cream mb-4 leading-tight">
+          <h2 className="font-display font-extrabold text-4xl md:text-6xl text-cream mb-4 leading-tight">
             Be the first to<br />
             <span className="text-lime">walk with us</span>
           </h2>
-          <p className="text-muted font-dm text-lg max-w-xl mx-auto">
+          <p className="text-muted font-body text-lg max-w-xl mx-auto">
             WalkMate is launching in Kochi first. Join the waitlist and get early access before anyone else — plus a Founding Walker badge.
           </p>
         </motion.div>
@@ -71,8 +70,8 @@ export default function DownloadCTA() {
               <path d="M17.74 6.3c.78-.95 1.3-2.27 1.16-3.58-1.12.05-2.47.75-3.27 1.7-.72.83-1.35 2.16-1.18 3.44 1.25.09 2.51-.63 3.29-1.56z" fill="#f0f2e8"/>
             </svg>
             <div className="text-left">
-              <div className="text-xs text-muted font-dm leading-none">Download on the</div>
-              <div className="font-syne font-bold text-cream text-sm leading-tight">App Store</div>
+              <div className="text-xs text-muted font-body leading-none">Download on the</div>
+              <div className="font-display font-bold text-cream text-sm leading-tight">App Store</div>
             </div>
           </button>
 
@@ -85,8 +84,8 @@ export default function DownloadCTA() {
               <path d="M5 24.2l7.6-13.7 3.5 3.5L5 24.2z" fill="#f0f2e8"/>
             </svg>
             <div className="text-left">
-              <div className="text-xs text-muted font-dm leading-none">Get it on</div>
-              <div className="font-syne font-bold text-cream text-sm leading-tight">Google Play</div>
+              <div className="text-xs text-muted font-body leading-none">Get it on</div>
+              <div className="font-display font-bold text-cream text-sm leading-tight">Google Play</div>
             </div>
           </button>
         </motion.div>
@@ -94,7 +93,7 @@ export default function DownloadCTA() {
         {/* Divider */}
         <div className="flex items-center gap-4 mb-8">
           <div className="flex-1 h-px bg-border-custom" />
-          <span className="text-muted text-xs font-dm">or join the waitlist</span>
+          <span className="text-muted text-xs font-body">or join the waitlist</span>
           <div className="flex-1 h-px bg-border-custom" />
         </div>
 
@@ -113,12 +112,12 @@ export default function DownloadCTA() {
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="your@email.com"
                 required
-                className="flex-1 bg-card border border-border-custom rounded-2xl px-5 py-3.5 text-cream font-dm text-sm placeholder:text-muted focus:outline-none focus:border-lime/50 transition-colors duration-200"
+                className="flex-1 bg-card border border-border-custom rounded-2xl px-5 py-3.5 text-cream font-body text-sm placeholder:text-muted focus:outline-none focus:border-lime/50 transition-colors duration-200"
               />
               <button
                 type="submit"
                 disabled={loading}
-                className="bg-lime text-dark font-syne font-bold text-sm px-7 py-3.5 rounded-2xl hover:bg-lime/90 active:scale-95 transition-all duration-150 disabled:opacity-70 flex items-center justify-center gap-2 whitespace-nowrap"
+                className="bg-lime text-dark font-display font-bold text-sm px-7 py-3.5 rounded-2xl hover:bg-lime/90 active:scale-95 transition-all duration-150 disabled:opacity-70 flex items-center justify-center gap-2 whitespace-nowrap"
               >
                 {loading ? (
                   <span className="w-4 h-4 border-2 border-dark/30 border-t-dark rounded-full animate-spin" />
@@ -140,14 +139,14 @@ export default function DownloadCTA() {
               className="text-center bg-card border border-lime/30 rounded-2xl p-6"
             >
               <div className="text-4xl mb-3">🎉</div>
-              <div className="font-syne font-bold text-xl text-cream mb-1">You&apos;re on the list!</div>
-              <div className="font-dm text-sm text-muted">
+              <div className="font-display font-bold text-xl text-cream mb-1">You&apos;re on the list!</div>
+              <div className="font-body text-sm text-muted">
                 We&apos;ll let you know the moment WalkMate launches in Kochi. Your Founding Walker badge is waiting.
               </div>
             </motion.div>
           )}
 
-          <p className="text-center text-xs text-muted font-dm mt-4">
+          <p className="text-center text-xs text-muted font-body mt-4">
             No spam, ever. Launching in Kochi first — Kerala&apos;s walking revolution starts here.
           </p>
         </motion.div>

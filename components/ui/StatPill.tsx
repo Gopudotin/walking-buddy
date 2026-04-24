@@ -20,8 +20,8 @@ export default function StatPill({ icon, label, value, delay = 0, className = ""
     >
       <span className="text-xl">{icon}</span>
       <div>
-        <div className="font-syne font-bold text-lime text-base leading-none">{value}</div>
-        <div className="text-muted text-xs mt-0.5 font-dm">{label}</div>
+        <div className="font-display font-bold text-lime text-base leading-none">{value}</div>
+        <div className="text-muted text-xs mt-0.5 font-body">{label}</div>
       </div>
     </motion.div>
   );

@@ -89,10 +89,10 @@ function StatCounter({ value, suffix, label, isDecimal = false, active }: { valu
   const count = useCountUp(value, isDecimal, active);
   return (
     <div className="text-center">
-      <div className="font-syne font-extrabold text-4xl md:text-5xl text-lime">
+      <div className="font-display font-extrabold text-4xl md:text-5xl text-lime">
         {isDecimal ? count.toFixed(1) : count.toLocaleString()}{suffix}
       </div>
-      <div className="font-dm text-sm text-muted mt-1">{label}</div>
+      <div className="font-body text-sm text-muted mt-1">{label}</div>
     </div>
   );
 }
@@ -115,13 +115,13 @@ export default function Testimonials() {
         >
           <div className="inline-flex items-center gap-2 bg-card border border-border-custom rounded-full px-4 py-1.5 mb-5">
             <span className="w-2 h-2 rounded-full bg-teal-custom" />
-            <span className="text-xs font-dm text-muted tracking-widest uppercase">Kochi Loves WalkMate</span>
+            <span className="text-xs font-body text-muted tracking-widest uppercase">Kochi Loves WalkMate</span>
           </div>
-          <h2 className="font-syne font-extrabold text-4xl md:text-5xl text-cream mb-4">
+          <h2 className="font-display font-extrabold text-4xl md:text-5xl text-cream mb-4">
             Real walkers,<br />
             <span className="text-lime">real stories</span>
           </h2>
-          <p className="text-muted font-dm text-lg max-w-xl mx-auto">
+          <p className="text-muted font-body text-lg max-w-xl mx-auto">
             From Palarivattom to Marine Drive — here&apos;s what our community is saying.
           </p>
         </motion.div>
@@ -143,8 +143,8 @@ export default function Testimonials() {
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 rounded-xl bg-mid flex items-center justify-center text-xl">{t.avatar}</div>
                 <div>
-                  <div className="font-syne font-bold text-sm text-cream">{t.name}</div>
-                  <div className="font-dm text-xs text-muted">{t.handle}</div>
+                  <div className="font-display font-bold text-sm text-cream">{t.name}</div>
+                  <div className="font-body text-xs text-muted">{t.handle}</div>
                 </div>
                 <div className="ml-auto flex gap-0.5">
                   {Array.from({ length: t.rating }).map((_, j) => (
@@ -152,13 +152,13 @@ export default function Testimonials() {
                   ))}
                 </div>
               </div>
-              <p className="font-dm text-sm text-cream/80 leading-relaxed mb-4">&ldquo;{t.text}&rdquo;</p>
+              <p className="font-body text-sm text-cream/80 leading-relaxed mb-4">&ldquo;{t.text}&rdquo;</p>
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-1.5">
                   <span className="text-xs text-muted">📍</span>
-                  <span className="font-dm text-xs text-muted">{t.location}</span>
+                  <span className="font-body text-xs text-muted">{t.location}</span>
                 </div>
-                <div className="font-syne font-bold text-xs text-lime">{t.walks}</div>
+                <div className="font-display font-bold text-xs text-lime">{t.walks}</div>
               </div>
             </div>
           ))}

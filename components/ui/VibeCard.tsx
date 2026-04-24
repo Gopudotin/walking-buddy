@@ -37,8 +37,8 @@ export default function VibeCard({ emoji, title, description, accent, delay = 0 
 
       <div className="text-4xl mb-4">{emoji}</div>
 
-      <h3 className="font-syne font-bold text-xl text-cream mb-2">{title}</h3>
-      <p className="text-muted text-sm font-dm leading-relaxed">{description}</p>
+      <h3 className="font-display font-bold text-xl text-cream mb-2">{title}</h3>
+      <p className="text-muted text-sm font-body leading-relaxed">{description}</p>
 
       {/* Subtle corner accent */}
       <div

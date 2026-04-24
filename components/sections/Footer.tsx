@@ -48,13 +48,13 @@ export default function Footer() {
           >
             <div className="flex items-center gap-2 mb-4">
               <div className="w-8 h-8 rounded-xl bg-lime flex items-center justify-center">
-                <span className="text-dark text-sm font-syne font-bold">W</span>
+                <span className="text-dark text-sm font-display font-bold">W</span>
               </div>
-              <span className="font-syne font-bold text-lg text-cream">
+              <span className="font-display font-bold text-lg text-cream">
                 Walk<span className="text-lime">Mate</span>
               </span>
             </div>
-            <p className="font-dm text-sm text-muted leading-relaxed mb-5">
+            <p className="font-body text-sm text-muted leading-relaxed mb-5">
               Walk together, arrive happier. Built in Kerala, for the streets of Kochi.
             </p>
             {/* Socials */}
@@ -79,7 +79,7 @@ export default function Footer() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: ci * 0.08, ease: [0.16, 1, 0.3, 1] }}
             >
-              <div className="font-syne font-bold text-xs text-muted uppercase tracking-widest mb-4">
+              <div className="font-display font-bold text-xs text-muted uppercase tracking-widest mb-4">
                 {col.heading}
               </div>
               <ul className="space-y-3">
@@ -87,7 +87,7 @@ export default function Footer() {
                   <li key={item}>
                     <Link
                       href="#"
-                      className="font-dm text-sm text-cream/60 hover:text-cream transition-colors duration-150"
+                      className="font-body text-sm text-cream/60 hover:text-cream transition-colors duration-150"
                     >
                       {item}
                     </Link>
@@ -103,16 +103,16 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="font-dm text-xs text-muted">
+          <p className="font-body text-xs text-muted">
             © {new Date().getFullYear()} WalkMate. Made with ❤️ in Kerala.
           </p>
           <div className="flex items-center gap-2 bg-card border border-border-custom rounded-full px-4 py-2">
             <span className="w-2 h-2 rounded-full bg-lime animate-pulse flex-shrink-0" />
-            <span className="font-dm text-xs text-muted italic">
+            <span className="font-body text-xs text-muted italic">
               &quot;Nandi, Kochi&apos;s first walking companion app&quot;
             </span>
           </div>
-          <p className="font-dm text-xs text-muted">
+          <p className="font-body text-xs text-muted">
             Kochi, Kerala, India 🇮🇳
           </p>
         </div>
